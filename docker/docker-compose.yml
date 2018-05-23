@@ -1,0 +1,21 @@
+version: '3.3'
+
+volumes:
+  data:
+services:
+  db_eagle_eye_local:
+    image: mysql:5.6
+    container_name: db_eagle_eye_local
+    ports:
+      - "3306:3306"
+    networks:
+      - eagle-eye
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=eagle_eye_local
+
+networks: 
+  eagle-eye:
+    driver: bridge
