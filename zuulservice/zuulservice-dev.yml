@@ -1,0 +1,6 @@
+zuul:
+  ignored-services: '*' # to ignore all automated mapping with eureka
+  prefix: /api
+  routes:
+    organizationservice: /organization/** # change organizationservice to organization
+    licensingservice: /licensing/**
