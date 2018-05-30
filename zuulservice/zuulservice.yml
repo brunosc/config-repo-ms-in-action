@@ -4,3 +4,19 @@ zuul:
   routes:
     organizationservice: /organization/** # change organizationservice to organization
     licensingservice: /licensing/**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2500
+
+#hystrix:
+#  command:
+#    licensingservice: # If you need to set the Hystrix timeout for specific service
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 2500
