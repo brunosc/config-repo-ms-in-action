@@ -1,4 +1,5 @@
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie # is a blacklist of the sensitive headers that Zuul will keep from being propagated to a downstream service (to pass Authorization)
   ignored-services: '*' # to ignore all automated mapping with eureka
   prefix: /api
   routes:
