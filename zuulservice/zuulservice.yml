@@ -6,13 +6,8 @@ zuul:
     organizationservice: /organization/** # change organizationservice to organization
     licensingservice: /licensing/**
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 2500
+signing:
+  key: "MyCustomSigningKey"
 
 #hystrix:
 #  command:
