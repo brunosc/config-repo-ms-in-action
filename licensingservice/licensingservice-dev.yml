@@ -15,4 +15,5 @@ signing:
   key: "MyCustomSigningKey"
   
 redis:
-  server: http://localhost:6379
+  server: localhost
+  port: 6379
