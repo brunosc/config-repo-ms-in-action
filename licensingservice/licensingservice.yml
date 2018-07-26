@@ -13,3 +13,7 @@ spring:
 
 signing:
   key: "MyCustomSigningKey"
+  
+redis:
+  server: localhost
+  port: 6379
